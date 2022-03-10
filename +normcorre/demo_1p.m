@@ -3,8 +3,13 @@
 % Example file is provided from the miniscope project page
 % www.miniscope.org
 
+% 2021.08.08 [19:30:20] - Updated to handle switch of all functions to be inside normcorre package. - Biafra
+
 clear;
 gcp;
+
+import normcorre.* % import NoRMCorre functions.
+
 %% download data and convert to single precision
 name = 'msCam13.avi';
 if ~exist(name,'file')  % download file if it doesn't exist in the directory

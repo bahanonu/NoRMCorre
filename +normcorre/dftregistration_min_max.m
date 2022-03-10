@@ -69,6 +69,10 @@ function [output, Greg] = dftregistration_min_max(buf1ft,buf2ft,usfac,min_shift,
 % ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 % POSSIBILITY OF SUCH DAMAGE.
 
+% 2021.08.08 [19:30:20] - Updated to handle switch of all functions to be inside normcorre package. - Biafra
+
+import normcorre.* % import NoRMCorre functions.
+
 if ~exist('phase_flag','var')
     phase_flag = true;
 end

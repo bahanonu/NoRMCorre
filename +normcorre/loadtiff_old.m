@@ -30,6 +30,10 @@ function oimg = loadtiff_old(path, sFrame, num2read)
 % ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
 % POSSIBILITY OF SUCH DAMAGE.
 
+% 2021.08.08 [19:30:20] - Updated to handle switch of all functions to be inside normcorre package. - Biafra
+
+import normcorre.* % import NoRMCorre functions.
+
 if nargin < 3 || isempty(num2read)
     num2read = Inf;
 end

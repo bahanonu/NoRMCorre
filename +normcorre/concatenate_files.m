@@ -10,6 +10,10 @@ function [Ycon,ln] = concatenate_files(files,filename,output_type)
 % Ycon:         concantenated file as an array if output_type == 'mat'
 % ln:           length of each file (in frames)
 
+% 2021.08.08 [19:30:20] - Updated to handle switch of all functions to be inside normcorre package. - Biafra
+
+import normcorre.* % import NoRMCorre functions.
+
 if ~exist('output_type','var')
     output_type = 'mat';
 end

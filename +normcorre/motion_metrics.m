@@ -14,6 +14,10 @@ function [cY,mY,ng] = motion_metrics(Y,bnd,batch_size,var_name)
 % mY:           mean image
 % ng:           norm of gradient of mean image
 
+% 2021.08.08 [19:30:20] - Updated to handle switch of all functions to be inside normcorre package. - Biafra
+
+import normcorre.* % import NoRMCorre functions.
+
 if nargin == 1 || isempty(bnd); bnd = zeros(6,1); end
 if nargin < 3|| isempty(batch_size); batch_size = 1000; end
 

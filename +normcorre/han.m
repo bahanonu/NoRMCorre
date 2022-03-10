@@ -6,7 +6,7 @@ function y = han(x,frac)
         frac = 0.5;
     end
     
-    if isinf(frac); 
+    if isinf(frac)
         y = x;
     else
         sx = size(x);
@@ -20,3 +20,4 @@ function y = han(x,frac)
             y = bsxfun(@times, y, h3);
         end            
     end
+end

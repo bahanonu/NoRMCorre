@@ -1,8 +1,12 @@
 % same as demo.m and demo_1p.m but using the MotionCorrection object. Scroll at the end
 % to the 1p example
 
+% 2021.08.08 [19:30:20] - Updated to handle switch of all functions to be inside normcorre package. - Biafra
+
 clear
 gcp;
+
+import normcorre.* % import NoRMCorre functions.
 
 name = 'granule_love2.tif';         % two photon dataset
 if ~exist(name,'file')  % download file if it doesn't exist in the directory

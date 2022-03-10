@@ -1,4 +1,4 @@
-function imData=read_file(path_to_file,sframe,num2read,options,im_info)
+function imData = read_file(path_to_file,sframe,num2read,options,im_info)
 
 % Reads uncompressed multipage .tiff, .hdf5, .avi or .raw files 
 % Usage:  my_data=read_file('path_to_data_file, start frame, num to read);
@@ -15,6 +15,10 @@ function imData=read_file(path_to_file,sframe,num2read,options,im_info)
 % imData:           data in array format 
 
 % Written by Eftychios A. Pnevmatikakis, Simons Foundation
+
+% 2021.08.08 [19:30:20] - Updated to handle switch of all functions to be inside normcorre package. - Biafra
+
+import normcorre.* % import NoRMCorre functions.
 
 if nargin<2 || isempty(sframe); sframe = 1; end
 if nargin<3 || isempty(num2read); num2read = Inf; end

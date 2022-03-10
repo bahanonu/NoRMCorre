@@ -1,5 +1,9 @@
 function h5_2_bin(path_to_file,output_name,precision,batch_size)
 
+% 2021.08.08 [19:30:20] - Updated to handle switch of all functions to be inside normcorre package. - Biafra
+
+import normcorre.* % import NoRMCorre functions.
+
 info = hdf5info(path_to_file);
 dims = info.GroupHierarchy.Datasets.Dims;
 T = dims(end);

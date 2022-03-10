@@ -1,6 +1,10 @@
 clear
 gcp;
 
+% 2021.08.08 [19:30:20] - Updated to handle switch of all functions to be inside normcorre package. - Biafra
+
+import normcorre.* % import NoRMCorre functions.
+
 name = 'granule_love2.tif';
 if ~exist(name,'file')  % download file if it doesn't exist in the directory
     url = 'https://www.dropbox.com/s/mjmtwn4pdgydkny/granule_love2.tif.zip?dl=1';

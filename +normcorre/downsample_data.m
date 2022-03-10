@@ -9,6 +9,11 @@ function Y_ds = downsample_data(Y,direction,tsub,ssub,nrm)
 % ssub:         degree of downsampling in space
 % nrm:          norm to be used when averaging (default: 1, plain averaging)
 
+
+% 2021.08.08 [19:30:20] - Updated to handle switch of all functions to be inside normcorre package. - Biafra
+
+import normcorre.* % import NoRMCorre functions.
+
 if nargin < 5 || isempty(nrm); nrm = 1; end
 if nargin < 4 || isempty(ssub); ssub = 1; end
 if nargin < 3 || isempty(tsub); tsub = 1; end

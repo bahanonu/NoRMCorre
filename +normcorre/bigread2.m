@@ -13,6 +13,10 @@ function imData=bigread2(path_to_file,sframe,num2read)
 %if nargin == 2, then assumes second is number of frames to read, and
 %starts at frame 1
 
+% 2021.08.08 [19:30:20] - Updated to handle switch of all functions to be inside normcorre package. - Biafra
+
+import normcorre.* % import NoRMCorre functions.
+
 [~,~,ext] = fileparts(path_to_file);
 
 if strcmpi(ext,'.tiff') || strcmpi(ext,'.tif');
