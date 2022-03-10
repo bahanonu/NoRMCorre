@@ -18,7 +18,7 @@ function I = shift_reconstruct(Y,shifts,diffphase,us_fac,Nr,Nc,Np,method,add_val
 
     import normcorre.* % import NoRMCorre functions.
 
-    if isreal(Y);
+    if isreal(Y)
         buf2ft = fftn(Y);
     else
         buf2ft = Y;
@@ -38,7 +38,11 @@ function I = shift_reconstruct(Y,shifts,diffphase,us_fac,Nr,Nc,Np,method,add_val
         
         row_shift = shifts(1);
         col_shift = shifts(2);
-        if ismatrix(Y); pln_shift = 0; else pln_shift = shifts(3); end
+        if ismatrix(Y)
+            pln_shift = 0;
+        else 
+            pln_shift = shifts(3);
+        end
         shifts = [row_shift,col_shift,pln_shift];
 
         if us_fac > 0
@@ -56,7 +60,5 @@ function I = shift_reconstruct(Y,shifts,diffphase,us_fac,Nr,Nc,Np,method,add_val
         else
             I = real(ifftn(Y));
         end
-    end
-
     end
 end

@@ -1,7 +1,18 @@
 [![Join the chat at https://gitter.im/epnev/ca_source_extraction](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/epnev/ca_source_extraction?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+# Notes on `bahanonu` fork.
+
+This fork adds certain features to NoRMCorre to make more usable in other code bases:
+
+- All NoRMCorre functions are now in the `+normcorre` directory so users can access NoRMCorre functions via the `normcorre` package. This is to reduce namespace conflicts and improve integration into other packages.
+
 # NoRMCorre: Non-Rigid Motion Correction 
 This package provides a Matlab implementation of the NoRMCorre algorithm [[1]](#ref), and can be used for online piecewise rigid motion correction of 2d (planar) or 3d (volumetric) calcium imaging data. 
+
+Contact: 
+
+- Contact original authors for questions about the algorithm.
+- For questions about changes implemented in this fork, see __Biafra Ahanonu, PhD (github [at] bahanonu [dot] com)__.
 
 ## Citation
 
